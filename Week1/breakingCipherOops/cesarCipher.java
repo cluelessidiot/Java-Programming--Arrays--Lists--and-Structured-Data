@@ -8,7 +8,15 @@
 import java.io.*;
 import edu.duke.*;
 public class cesarCipher {
-String encrypt(String input,int key){
+    
+private String input;
+private int key;    
+public cesarCipher(String message,int key){
+ input=message;
+  key=key;
+
+}    
+String encrypt(){
  StringBuilder encrypted= new StringBuilder(input);
  String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
  String shiftedAlphabet = alphabet.substring(key)+alphabet.substring(0,key);   
@@ -68,8 +76,8 @@ void testCaesar(){
  //FileResource fr = new FileResource();
  //String message = fr.asString();
 
- System.out.println(encrypt("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!",15));
-  System.out.println(encryptTwoKeys("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!",8,21));
+ //System.out.println(encrypt("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!",15));
+  //System.out.println(encryptTwoKeys("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!",8,21));
 
  
 
