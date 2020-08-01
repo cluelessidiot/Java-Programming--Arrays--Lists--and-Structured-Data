@@ -21,5 +21,6 @@ public class Tester
         LogAnalyzer la = new LogAnalyzer();
         la.readFile();
         la.printAll();
+        System.out.println( "unique IPS "+la.countUniqueIPs ());
     }
 }

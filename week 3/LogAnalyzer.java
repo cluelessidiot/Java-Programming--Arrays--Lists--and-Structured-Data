@@ -26,7 +26,25 @@ public class LogAnalyzer
             records.add(parser.parseEntry(lines));
             }
      }
+     void printAllHigherThanNum (int num){
         
+        for(LogEntry le: records){
+           if(le.getStatusCode()>num)
+               System.out.println(le);
+        }
+    }
+     public int countUniqueIPs(){
+        ArrayList<String> uniqueIPs = new ArrayList<String> ();
+        for(LogEntry le: records){
+        
+        String ipadr= le.getIpAddress();
+        if(!uniqueIPs.contains(ipadr))
+           uniqueIPs.add(ipadr);
+        }  
+         return uniqueIPs.size();  
+        }
+        
+           
      public void printAll() {
          for (LogEntry le : records) {
              System.out.println(le);
