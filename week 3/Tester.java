@@ -22,5 +22,10 @@ public class Tester
         la.readFile();
         la.printAll();
         System.out.println( "unique IPS "+la.countUniqueIPs ());
+        //la.printAllHigherThanNum (200);
+        System.out.println(la. uniqueIPVisitsOnDay("Sep 14").size());
+        System.out.println(la. uniqueIPVisitsOnDay("Sep 30").size());
+        System.out.println(la.countUniqueIPsInRange(200,299)); 
+        System.out.println(la.countUniqueIPsInRange(300,399)); 
     }
 }
