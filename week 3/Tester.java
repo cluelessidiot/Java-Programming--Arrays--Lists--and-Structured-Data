@@ -20,12 +20,12 @@ public class Tester
     public void testLogAnalyzer() {
         LogAnalyzer la = new LogAnalyzer();
         la.readFile();
-        la.printAll();
+        //la.printAll();
         System.out.println( "unique IPS "+la.countUniqueIPs ());
-        //la.printAllHigherThanNum (200);
-        System.out.println(la. uniqueIPVisitsOnDay("Sep 14").size());
-        System.out.println(la. uniqueIPVisitsOnDay("Sep 30").size());
-        System.out.println(la.countUniqueIPsInRange(200,299)); 
+        //la.printAllHigherThanNum (400);
+        System.out.println(la. uniqueIPVisitsOnDay("Mar 24").size());
+       // System.out.println(la. uniqueIPVisitsOnDay("Sep 30").size());
+        //System.out.println(la.countUniqueIPsInRange(200,299)); 
         System.out.println(la.countUniqueIPsInRange(300,399)); 
     }
 }
