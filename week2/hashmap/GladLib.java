@@ -88,6 +88,19 @@ public class GladLib {
         }
         return "**UNKNOWN**";
     }
+    void totalWordsInMap (){
+    for(String Word:myMap.keySet()){
+    System.out.println(Word +"has "+ myMap.get(Word).size() +" elements");
+    
+    }}
+    void totalWordsConsidered(){
+    int ct=0;
+    for(String Word:myMap.keySet()){
+        ct=ct+ myMap.get(Word).size();}
+         System.out.println("total words is "+ct);
+    }
+    
+    
     
     private String processWord(String w){
         int first = w.indexOf("<");
