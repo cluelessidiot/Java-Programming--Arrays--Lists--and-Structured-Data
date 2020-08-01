@@ -21,11 +21,11 @@ public class Tester
         LogAnalyzer la = new LogAnalyzer();
         la.readFile();
         //la.printAll();
-       // System.out.println( "unique IPS "+la.countUniqueIPs ());
+        System.out.println( "---unique IPS "+la.countUniqueIPs ());
         //la.printAllHigherThanNum (400);
-       // System.out.println(la. uniqueIPVisitsOnDay("Mar 24").size());
+        System.out.println(la. uniqueIPVisitsOnDay("Sep 24").size());
        // System.out.println(la. uniqueIPVisitsOnDay("Sep 30").size());
-        //System.out.println(la.countUniqueIPsInRange(200,299)); 
+        System.out.println(la.countUniqueIPsInRange(400,499)); 
        // System.out.println(la.countUniqueIPsInRange(300,399)); 
        HashMap<String,Integer> ipMap = la.countVisitsPerIP();
        System.out.println(la.mostNumberVisitsByIP(ipMap));
