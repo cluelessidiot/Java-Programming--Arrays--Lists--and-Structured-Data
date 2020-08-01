@@ -21,11 +21,26 @@ public class Tester
         LogAnalyzer la = new LogAnalyzer();
         la.readFile();
         //la.printAll();
-        System.out.println( "unique IPS "+la.countUniqueIPs ());
+       // System.out.println( "unique IPS "+la.countUniqueIPs ());
         //la.printAllHigherThanNum (400);
-        System.out.println(la. uniqueIPVisitsOnDay("Mar 24").size());
+       // System.out.println(la. uniqueIPVisitsOnDay("Mar 24").size());
        // System.out.println(la. uniqueIPVisitsOnDay("Sep 30").size());
         //System.out.println(la.countUniqueIPsInRange(200,299)); 
-        System.out.println(la.countUniqueIPsInRange(300,399)); 
+       // System.out.println(la.countUniqueIPsInRange(300,399)); 
+       HashMap<String,Integer> ipMap = la.countVisitsPerIP();
+       System.out.println(la.mostNumberVisitsByIP(ipMap));
+       ArrayList <String> ar =la.iPsMostVisits(ipMap);
+       for(int i=0;i<ar.size();i++)
+          System.out.println(ar.get(i));
+          
+       HashMap<String, ArrayList<String>> dMap = la.iPsForDays();
+       for(String key:dMap.keySet()){
+           System.out.println(key+" "+ dMap.get(key).size());
+        }
+        System.out.println("Most ip visit " + la.dayWithMostIPVisits(dMap));
+        ArrayList <String> ipMost = la.iPsWithMostVisitsOnDay(dMap,"Sep 30");
+        System.out.println("repeated ip oin day Sep 30 ");      
+        for(int i=0;i<ipMost.size();i++)
+          System.out.println(ipMost.get(i));
     }
 }
