@@ -27,24 +27,26 @@ public class GladLib {
     }
     
     private void initializeFromSource() {
+                String currentDirectory = System.getProperty("user.dir");
+        System.out.println("The current working directory is " + currentDirectory);
         myMap = new HashMap <String,ArrayList<String>> ();
-        adjectiveList= readIt("Gladlib/data/adjective.txt"); 
+        adjectiveList= readIt("data/adjective.txt"); 
         myMap.put("adjective",adjectiveList);
-        nounList = readIt("Gladlib/data/noun.txt");
+        nounList = readIt("data/noun.txt");
         myMap.put("noun",nounList);
-        colorList = readIt("Gladlib/data/color.txt");
+        colorList = readIt("data/color.txt");
         myMap.put("color",colorList);
-        countryList = readIt("Gladlib/data/country.txt");
+        countryList = readIt("data/country.txt");
         myMap.put("country",countryList);
-        nameList = readIt("Gladlib/data/name.txt");      
+        nameList = readIt("data/name.txt");      
         myMap.put("name",nameList);
-        animalList = readIt("Gladlib/data/animal.txt");
+        animalList = readIt("data/animal.txt");
         myMap.put("animal",animalList);
-        timeList = readIt("Gladlib/data/timeframe.txt");
+        timeList = readIt("data/timeframe.txt");
         myMap.put("timeframe",timeList);
-        verbList = readIt("Gladlib/data/verb.txt");
+        verbList = readIt("data/verb.txt");
         myMap.put("verb",verbList);
-        fruitList = readIt("Gladlib/data/fruit.txt");
+        fruitList = readIt("data/fruit.txt");
         myMap.put("fruit",fruitList);
     }
     
@@ -73,7 +75,7 @@ public class GladLib {
             return randomFrom(myMap.get("animal"));
         }
         if (label.equals("timeframe")){
-            return randomFrom(myMap.get("time"));
+            return randomFrom(myMap.get("timeframe"));
         }
         if (label.equals("number")){
             return ""+myRandom.nextInt(50)+5;
@@ -147,7 +149,7 @@ public class GladLib {
     
     public void makeStory(){
         System.out.println("\n");
-        String story = fromTemplate("Gladlib/data/madtemplate2.txt");
+        String story = fromTemplate("data/madtemplate2.txt");
         printOut(story, 60);
     }
     
