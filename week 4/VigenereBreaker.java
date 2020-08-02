@@ -23,6 +23,25 @@ public class VigenereBreaker {
     public void breakVigenere () {
         //WRITE YOUR CODE HERE
     }
+    HashSet readDictionary(FileResource fr){
+    HashSet <String> dict = new HashSet <String> ();
+    for (String line : fr.lines()) {
+    dict.add(line.toLowerCase());
+    
+    }
+    return dict;
+    }
+     int countWords(String message,HashSet<String> dict){
+        String [] split = message.split("\\W+");
+        int ct = 0;
+        for(int i=0;i<split.length;i++){
+          if(dict.contains(split[i]))
+               ct++;        
+        
+        }
+        return ct;
+        }
+    
     void test(){
     FileResource fr = new FileResource ();
     String msg = fr.asString();
