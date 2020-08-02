@@ -26,8 +26,8 @@ public class VigenereBreaker {
     void test(){
     FileResource fr = new FileResource ();
     String msg = fr.asString();
-    int [] k  = tryKeyLength(msg,5,'e');
-    for(int i=0;i<5;i++)
+    int [] k  = tryKeyLength(msg,4,'e');
+    for(int i=0;i<4;i++)
       System.out.println(k[i]);
     VigenereCipher vc = new VigenereCipher(k);
     String decrypt = vc.decrypt(msg);
